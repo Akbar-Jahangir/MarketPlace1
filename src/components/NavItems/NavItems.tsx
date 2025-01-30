@@ -7,9 +7,8 @@ import { AuthContext } from "../../contexts/authContext/authContext";
 const NavItems: React.FC<NavItemsProps> = ({
   customStyle,
   onClick,
-  isLogin = false,
 }) => {
-  const { setWebAccessToken } = useContext(AuthContext);
+  const { webAccessToken,setWebAccessToken } = useContext(AuthContext);
   const navigate = useNavigate();
   return (
     <>
@@ -43,7 +42,7 @@ const NavItems: React.FC<NavItemsProps> = ({
         </NavLink>
         <li className="list-style">ABOUT</li>
         <li>
-          {isLogin ? (
+          {webAccessToken !=="" ? (
             <Button
               text="LOG OUT"
               customStyle="text-center bg-warning lg:hidden w-[100px] lg:w-[124px] text-white font-Montserrat text-lg rounded-md mb-2"

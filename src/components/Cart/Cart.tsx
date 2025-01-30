@@ -35,6 +35,7 @@ const Cart: React.FC = () => {
   const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCountry(event.target.value);
   };
+console.log(selectedCountry);
 
   const productDeliveryData = [
     { title: "Courier", price: 20.0, profession: "JNE Express" },
