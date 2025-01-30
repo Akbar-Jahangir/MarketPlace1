@@ -18,27 +18,33 @@ const BrowseCategory = lazy(() => import("../pages/browseCategory"));
 const Index: React.FC = () => {
   return (
     <AuthProvider>
-    <CartProvider>
-      <Router>
-        {/* Suspense component for fallback loading indicators */}
-        <Suspense fallback={<div className="w-full flex justify-center">Loading...</div>}>
-          <Routes>
-            <Route path="/" element={<DisplayPage />} />
-            <Route path="/" element={<AppLayout />}>
-              <Route path="home" element={<Home />} />
-              <Route path="category" element={<Category />} />
-              <Route path="products" element={<Products />} />
-              <Route path="productDetails/:id" element={<ProductDetails/>} />
-              <Route path="cart" element={<Cart />} />
-              <Route path="checkout" element={<CartCheckout />} />
-              <Route path="browseCategory/:name" element={<BrowseCategory/>} />
-
-            </Route>
-            <Route path="login" element={<LoginPage />} />
-          </Routes>
-        </Suspense>
-      </Router>
-    </CartProvider>
+      <CartProvider>
+        <Router>
+          {/* Suspense component for fallback loading indicators */}
+          <Suspense
+            fallback={
+              <div className="w-full flex justify-center">Loading...</div>
+            }
+          >
+            <Routes>
+              <Route path="/" element={<DisplayPage />} />
+              <Route path="/" element={<AppLayout />}>
+                <Route path="home" element={<Home />} />
+                <Route path="category" element={<Category />} />
+                <Route path="products" element={<Products />} />
+                <Route path="productDetails/:id" element={<ProductDetails />} />
+                <Route path="cart" element={<Cart />} />
+                <Route path="checkout" element={<CartCheckout />} />
+                <Route
+                  path="browseCategory/:name"
+                  element={<BrowseCategory />}
+                />
+              </Route>
+              <Route path="login" element={<LoginPage />} />
+            </Routes>
+          </Suspense>
+        </Router>
+      </CartProvider>
     </AuthProvider>
   );
 };

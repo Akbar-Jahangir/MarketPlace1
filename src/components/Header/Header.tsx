@@ -5,13 +5,13 @@ import NavItems from "../NavItems/NavItems";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
 import CartSummary from "../Cart/CartTotalItems";
-import { HeaderProps } from "./HeaderProps.interface";
 import { AuthContext } from "../../contexts/authContext/authContext";
 
-const Header: React.FC<HeaderProps> = ({ isLogin = false }) => {
+const Header: React.FC= () => {
   const [isHamburger, setIsHamburger] = useState<boolean>(false);
-  const { setWebAccessToken } = useContext(AuthContext);
+const { webAccessToken,setWebAccessToken } = useContext(AuthContext);
   const navigate = useNavigate();
+
   return (
     <>
       <div className="bg-black flex justify-center">
@@ -19,24 +19,24 @@ const Header: React.FC<HeaderProps> = ({ isLogin = false }) => {
           <div className="w-[90%] hidden lg:flex h-[80px] items-center justify-between">
             <LogoSvg />
             <NavItems />
-            {isLogin ? (
-              <Button
-                text="LOG OUT"
-                customStyle="bg-warning w-[124px] h-[30px] text-white font-Montserrat font-semibold text-lg rounded-md"
-                onClick={() => {
-                  setWebAccessToken("");
-                  navigate("/");
-                }}
-              />
-            ) : (
-              <Button
-                text="LOGIN"
-                customStyle="bg-warning w-[124px] h-[30px] text-white font-Montserrat font-semibold text-lg rounded-md"
-                onClick={() => {
-                  navigate("/login");
-                }}
-              />
-            )}
+            {webAccessToken !=="" ? (
+            <Button
+              text="LOG OUT"
+              customStyle="text-center bg-warning lg:hidden w-[100px] lg:w-[124px] text-white font-Montserrat text-lg rounded-md mb-2"
+              onClick={() => {
+                setWebAccessToken("");
+                navigate("/");
+              }}
+            />
+          ) : (
+            <Button
+              text="LOGIN"
+              customStyle="text-center bg-warning lg:hidden w-[100px] lg:w-[124px] text-white font-Montserrat text-lg rounded-md mb-2"
+              onClick={() => {
+                navigate("/login");
+              }}
+            />
+          )}
             <CartSummary />
           </div>
 
@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ isLogin = false }) => {
             />
           </div>
           {isHamburger && (
-            <NavItems isLogin ={isLogin}
+            <NavItems
               customStyle="flex flex-col lg:hidden"
               onClick={() => setIsHamburger(false)}
             />
