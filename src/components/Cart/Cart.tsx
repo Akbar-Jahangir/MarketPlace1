@@ -77,7 +77,7 @@ console.log(selectedCountry);
               <Breadcrumb />
               <div>
                 <div>
-                  <div className="flex flex-col lg:flex-row  items-center lg:justify-between flex-wrap w-[100%]">
+                  <div className="flex flex-col lg:flex-row  items-center lg:items-start lg:justify-between flex-wrap w-[100%]">
                     <div className="w-[90%] lg:w-[45%]">
                       <p className="font-Inter text-lg pb-7">Yours Items</p>
                       {cart.map((product, index) => (
@@ -92,6 +92,7 @@ console.log(selectedCountry);
                             cardStyles={cardsStyle}
                             currency="$"
                           />
+                          
                           <Button
                             type="button"
                             text={<CrossSvg />}

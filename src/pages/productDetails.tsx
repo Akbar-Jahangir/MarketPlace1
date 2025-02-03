@@ -11,6 +11,7 @@ import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import { AuthContext } from "../contexts/authContext/authContext";
 import { CartContext } from "../contexts/cartContext/cartContext";
 import { CartItemProps } from "../interfaces/cartItem.interface";
+import Counter from "../components/Counter/Counter";
 
 const ProductDetails: React.FC = () => {
   const [countProduct, setCountProduct] = useState<number>(1);
@@ -112,6 +113,7 @@ const ProductDetails: React.FC = () => {
                       setCountProduct(countProduct - 1);
                     }}
                   />
+                  <Counter/>
                 </div>
               </div>
 

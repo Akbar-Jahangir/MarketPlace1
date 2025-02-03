@@ -12,6 +12,8 @@ const CardsGallery: React.FC<CardsListProps> = ({
   customGap,
   currency,
 }) => {
+
+  
   return (
     <>
       <div className={`${customStyles}`}>
@@ -60,4 +62,4 @@ const CardsGallery: React.FC<CardsListProps> = ({
   );
 };
 
-export default CardsGallery;
+export default React.memo(CardsGallery);

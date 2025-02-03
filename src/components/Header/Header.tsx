@@ -19,10 +19,11 @@ const { webAccessToken,setWebAccessToken } = useContext(AuthContext);
           <div className="w-[90%] hidden lg:flex h-[80px] items-center justify-between">
             <LogoSvg />
             <NavItems />
+            
             {webAccessToken !=="" ? (
             <Button
               text="LOG OUT"
-              customStyle="text-center bg-warning lg:hidden w-[100px] lg:w-[124px] text-white font-Montserrat text-lg rounded-md mb-2"
+              customStyle="bg-warning w-[124px] h-[30px] text-white font-Montserrat font-semibold text-lg rounded-md"
               onClick={() => {
                 setWebAccessToken("");
                 navigate("/");
@@ -31,7 +32,7 @@ const { webAccessToken,setWebAccessToken } = useContext(AuthContext);
           ) : (
             <Button
               text="LOGIN"
-              customStyle="text-center bg-warning lg:hidden w-[100px] lg:w-[124px] text-white font-Montserrat text-lg rounded-md mb-2"
+              customStyle="bg-warning w-[124px] h-[30px] text-white font-Montserrat font-semibold text-lg rounded-md"
               onClick={() => {
                 navigate("/login");
               }}
