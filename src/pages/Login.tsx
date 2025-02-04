@@ -1,12 +1,12 @@
 import Button from "../components/Button/Button";
-import { LogoSvg } from "../assets/Svgs";
-import Input from "../components/Input/Input";
+import { LogoSvg } from "../assets/svgs";
+import { Input } from "../components/Input";
 import LampImg from "../assets/images/lamp.png";
 import BoyImg from "../assets/images/BoyImage.png";
 import BgImg from "../assets/images/background.png";
 import { useNavigate } from "react-router-dom";
 import React, { useContext, useState } from "react";
-import { AuthContext } from "../contexts/authContext/authContext";
+import { AuthContext } from "../contexts/authContext/AuthContext";
 
 const LoginPage: React.FC = () => {
   const [username, setUsername] = useState<string>("");

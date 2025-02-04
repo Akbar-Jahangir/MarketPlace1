@@ -1,4 +1,4 @@
-import { CardStyleProps } from "./CardStyle.interface";
+import { CardStyleProps } from "./cardStyle.interface";
 
 export interface CardProps {
   id?: string;

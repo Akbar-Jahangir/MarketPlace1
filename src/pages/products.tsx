@@ -1,5 +1,5 @@
 import React from "react";
-import CardsGallery from "../layout/cardsGallery/cardsGallery";
+import CardsGallery from "../layout/cardsGallery/CardsGallery";
 import UseAllProducts from "../hooks/useAllProducts";
 
 const Products: React.FC = () => {

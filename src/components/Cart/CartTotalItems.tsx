@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { CartSvg } from "../../assets/Svgs";
+import { CartSvg } from "../../assets/svgs";
 import {  NavLink } from "react-router-dom";
-import { CartContext } from "../../contexts/cartContext/cartContext";
+import { CartContext } from "../../contexts/cartContext/CartContext";
 
 const CartSummary: React.FC = () => {
   const {cart}=useContext(CartContext)

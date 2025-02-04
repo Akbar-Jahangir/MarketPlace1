@@ -6,7 +6,7 @@ import {
   NikeLogoSvg,
   PullBearLogoSvg,
   UniqloSvg,
-} from "../assets/Svgs";
+} from "../assets/svgs";
 import Button from "./Button/Button";
 import DemoImg from "../assets/images/demoImg.png";
 

@@ -1,6 +1,6 @@
 import React, { memo, useState } from 'react'
 import Button from '../Button/Button'
-import { MinusSvg, PlusSvg } from '../../assets/Svgs';
+import { MinusSvg, PlusSvg } from '../../assets/svgs';
 
 const Counter:React.FC=()=> {
     const [countProduct, setCountProduct] = useState<number>(1);

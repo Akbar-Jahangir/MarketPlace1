@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { CardProps } from "../interfaces/Card.interface"; // Adjust the import path as needed
+import { CardProps } from "../interfaces/card.interface"; // Adjust the import path as needed
 
 const UseProductDetails = (id: any | undefined)=> {
   const [singleProduct, setSetSingleProduct] = useState<CardProps | null>(null); 

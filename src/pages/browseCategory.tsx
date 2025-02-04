@@ -1,5 +1,5 @@
 import React from "react";
-import CardsGallery from "../layout/cardsGallery/cardsGallery";
+import CardsGallery from "../layout/cardsGallery/CardsGallery";
 import { useParams } from "react-router-dom";
 import UseBrowseCategory from "../hooks/useBrowseCategory";
 

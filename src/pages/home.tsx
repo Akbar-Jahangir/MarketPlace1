@@ -1,7 +1,7 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
 import DemoImg from "../assets/images/profilePic1.png";
-import CardsGallery from "../layout/cardsGallery/cardsGallery";
+import CardsGallery from "../layout/cardsGallery/CardsGallery";
 import UseLimitedProduct from "../hooks/useLimitedProduct";
 
 const Home: React.FC = () => {

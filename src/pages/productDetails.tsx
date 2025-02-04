@@ -1,15 +1,15 @@
 import React, { useContext, useMemo, useState } from "react";
 import ProfileImg from "../assets/images/profileImg.png";
-import CardsGallery from "../layout/cardsGallery/cardsGallery";
+import CardsGallery from "../layout/cardsGallery/CardsGallery";
 import Button from "../components/Button/Button";
-import CardDefinition from "../components/Card/CardGalleryDefinition";
-import { MinusSvg, PlusSvg } from "../assets/Svgs";
+import CardDefinition from "../components/Card/cardGalleryDefinition";
+import { MinusSvg, PlusSvg } from "../assets/svgs";
 import Card from "../components/Card/Card";
 import { useNavigate, useParams } from "react-router-dom";
 import UseProductDetails from "../hooks/useProductDetails";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
-import { AuthContext } from "../contexts/authContext/authContext";
-import { CartContext } from "../contexts/cartContext/cartContext";
+import { AuthContext } from "../contexts/authContext/AuthContext";
+import { CartContext } from "../contexts/cartContext/CartContext";
 import { CartItemProps } from "../interfaces/cartItem.interface";
 import Counter from "../components/Counter/Counter";
 

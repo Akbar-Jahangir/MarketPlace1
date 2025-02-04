@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
-import CardDefinition from "../Card/CardGalleryDefinition";
+import CardDefinition from "../Card/cardGalleryDefinition";
 import Label from "../Label/Label";
 import Input from "../Input/Input";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import { useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
-import { CartContext } from "../../contexts/cartContext/cartContext";
+import { CartContext } from "../../contexts/cartContext/CartContext";
 import Card from "../Card/Card";
-import { CrossSvg } from "../../assets/Svgs";
+import { CrossSvg } from "../../assets/svgs";
 import SelectDropdown from "../SelectdropDown/SelectDropDown";
 
 const Cart: React.FC = () => {

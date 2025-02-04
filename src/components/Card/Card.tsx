@@ -1,7 +1,7 @@
 import React, { memo } from "react";
-import { CardProps } from "../../interfaces/Card.interface";
+import { CardProps } from "../../interfaces/card.interface";
 import { useNavigate } from "react-router-dom";
-import { PlusSvg } from "../../assets/Svgs";
+import { PlusSvg } from "../../assets/svgs";
 
 const Card: React.FC<CardProps> = ({
   title,

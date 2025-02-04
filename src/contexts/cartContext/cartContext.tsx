@@ -1,6 +1,6 @@
 import React, {createContext, useState } from "react";
 import { CartContextProps } from "./cartContext.interface";
-import { ContextProviderProps } from "../../interfaces/ContextProviderProps.interface";
+import { ContextProviderProps } from "../../interfaces/contextProviderProps.interface";
 import { CartItemProps } from "../../interfaces/cartItem.interface";
 
 const inititalCartContext: CartContextProps = {

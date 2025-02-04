@@ -1,5 +1,5 @@
 import React from "react";
-import { CardGalleryDefinitionProps } from "../../interfaces/CardGalleryDefinition.interface";
+import { CardGalleryDefinitionProps } from "../../interfaces/cardGalleryDefinition.interface";
 
 const CardDefinition: React.FC<CardGalleryDefinitionProps> = ({
   galleryTitleStyles,

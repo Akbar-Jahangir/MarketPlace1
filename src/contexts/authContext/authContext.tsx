@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
-import { AuthContextProps } from "./AuthContextProps.interface";
-import { ContextProviderProps } from "../../interfaces/ContextProviderProps.interface";
+import { AuthContextProps } from "./authContextProps.interface";
+import { ContextProviderProps } from "../../interfaces/contextProviderProps.interface";
 
 // Create a default value for context
 const defaultAuthContext: AuthContextProps = {
