@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import CardDefinition from "../Card/cardGalleryDefinition";
 import Label from "../Label/Label";
-import Input from "../Input/Input";
+import {Input} from "../Input/Input";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import { useNavigate } from "react-router-dom";
 import Button from "../Button/Button";

@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const UseAllProducts = () => {
+const useFetch = (url:string) => {
   const [allProducts, setAllProducts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://dummyjson.com/products');
+        const response = await axios.get(url);
         setAllProducts(response.data.products);
       } 
       catch (error) {
@@ -18,4 +18,4 @@ const UseAllProducts = () => {
   return allProducts;
 };
 
-export default UseAllProducts;
+export default useFetch;

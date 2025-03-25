@@ -1,1 +1,0 @@
-import{j as s}from"./index-CyL-PFgw.js";const o=({placeholder:t,type:r,customStyle:n,value:e,onChange:a})=>s.jsx(s.Fragment,{children:s.jsx("input",{type:r,placeholder:t,className:n,value:e,onChange:a})});export{o as I};

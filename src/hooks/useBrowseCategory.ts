@@ -2,7 +2,7 @@ import axios from "axios";
 import {  useEffect, useState } from "react";
 
 
-const UseBrowseCategory = (name:string | undefined) => {
+const useBrowseCategory = (name:string | undefined) => {
   const [Products, setProducts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -19,4 +19,4 @@ const UseBrowseCategory = (name:string | undefined) => {
   return Products;
 };
 
-export default UseBrowseCategory;
+export default useBrowseCategory;

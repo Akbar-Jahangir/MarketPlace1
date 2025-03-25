@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { CardProps } from "../interfaces/card.interface"; // Adjust the import path as needed
 
-const UseProductDetails = (id: any | undefined)=> {
+const useProductDetails = (id: any | undefined)=> {
   const [singleProduct, setSetSingleProduct] = useState<CardProps | null>(null); 
   const [similarProducts, setSimilarProducts] = useState<CardProps[]>([]); 
   const [category, setCategory] = useState<string>("");
@@ -41,4 +41,4 @@ const UseProductDetails = (id: any | undefined)=> {
   return {singleProduct,similarProducts}
 };
 
-export default UseProductDetails;
+export default useProductDetails;

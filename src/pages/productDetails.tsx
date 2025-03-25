@@ -11,7 +11,6 @@ import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import { AuthContext } from "../contexts/authContext/AuthContext";
 import { CartContext } from "../contexts/cartContext/CartContext";
 import { CartItemProps } from "../interfaces/cartItem.interface";
-import Counter from "../components/Counter/Counter";
 
 const ProductDetails: React.FC = () => {
   const [countProduct, setCountProduct] = useState<number>(1);
@@ -47,17 +46,14 @@ const ProductDetails: React.FC = () => {
     cardTextStyles: "text-lightblack",
     clickable: true,
   };
-  
-  // const totalPrice: number = singleProduct?.price || 0 * countProduct;
 
   const product: CartItemProps = {
     id: singleProduct?.id || "",
     title: singleProduct?.title || "",
     price: totalPrice,
     quantity: countProduct,
-    thumbnail:singleProduct?.thumbnail
+    thumbnail: singleProduct?.thumbnail
   };
-
 
   return (
     <>
@@ -110,10 +106,10 @@ const ProductDetails: React.FC = () => {
                     type="button"
                     customStyle="w-[31px] h-[31px] bg-lightslate rounded flex justify-center items-center"
                     onClick={() => {
-                      setCountProduct(countProduct - 1);
+                      // Only decrease count if it's greater than 1
+                      setCountProduct(prevCount => prevCount > 1 ? prevCount - 1 : 1);
                     }}
                   />
-                  <Counter/>
                 </div>
               </div>
 
@@ -126,9 +122,8 @@ const ProductDetails: React.FC = () => {
                       alert("Please login first");
                       navigate("/login");
                     } else {
-                      
                       addToCart(product)
-                       navigate("/cart")
+                      navigate("/cart")
                     }
                   }}
                 />
@@ -166,7 +161,6 @@ const ProductDetails: React.FC = () => {
       </div>
 
       {/* Product Description and  Reviews */}
-
       <div
         className="w-full py-10 h-fit flex justify-center "
         style={{
@@ -239,7 +233,6 @@ const ProductDetails: React.FC = () => {
       </div>
 
       {/* Similar Products */}
-
       <CardsGallery
         cardsList={productDetails.similarProducts}
         cardStyles={cardsStyle}

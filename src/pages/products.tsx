@@ -1,9 +1,9 @@
 import React from "react";
 import CardsGallery from "../layout/cardsGallery/CardsGallery";
-import UseAllProducts from "../hooks/useAllProducts";
+import useFetch from "../hooks/useFetch";
 
 const Products: React.FC = () => {
-const productsList= UseAllProducts()
+const productsList= useFetch('https://dummyjson.com/products')
 
 const layoutDefinition = [
   {

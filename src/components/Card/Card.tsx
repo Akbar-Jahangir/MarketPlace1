@@ -17,9 +17,7 @@ const Card: React.FC<CardProps> = ({
   followers,
 }) => {
   const navigate = useNavigate();
-  console.log("card is rendering",followers);
   
-
   const handleClick = (id?: string) => {
     {id!==undefined? navigate(`/productDetails/${id}`):navigate(`/browseCategory/${name}`)}
    

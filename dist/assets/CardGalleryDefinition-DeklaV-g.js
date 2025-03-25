@@ -1,1 +1,0 @@
-import{j as s}from"./index-CyL-PFgw.js";const l=({galleryTitleStyles:e,galleryTitle:t,customStyles:a,galleryTextStyles:r,galleryText:n})=>s.jsx(s.Fragment,{children:s.jsxs("div",{className:`${a} space-y-2`,children:[s.jsx("h2",{className:`${e} text-3xl font-Lora font-bold`,children:t}),s.jsx("p",{className:`${r} text-lightblack`,children:n})]})});export{l as C};
