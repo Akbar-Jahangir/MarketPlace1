@@ -4,6 +4,8 @@ import useFetch from "../hooks/useFetch";
 
 const Products: React.FC = () => {
 const productsList= useFetch('https://dummyjson.com/products')
+console.log("products",productsList);
+
 
 const layoutDefinition = [
   {

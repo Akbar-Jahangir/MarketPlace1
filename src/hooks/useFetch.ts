@@ -14,6 +14,8 @@ const useFetch = (url:string) => {
       }
     };
     fetchData();
+   
+    
   }, []);
   return allProducts;
 };

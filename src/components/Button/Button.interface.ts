@@ -5,5 +5,6 @@ export interface ButtonProps {
     onClick?: () => void;
     customStyle?: string;
     type?: "button" | "submit" | "reset";
+    disabled?:boolean
 
 }

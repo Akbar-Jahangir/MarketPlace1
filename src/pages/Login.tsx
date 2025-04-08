@@ -12,37 +12,43 @@ const LoginPage: React.FC = () => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const navigate = useNavigate();
- const authContext =useContext(AuthContext)
- const {setWebAccessToken} =authContext;
+  const authContext = useContext(AuthContext);
+  const { setWebAccessToken, setUser } = authContext;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+
     try {
       const response = await fetch("https://dummyjson.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password, expiresInMins: 10}),
-        
+        body: JSON.stringify({ username, password, expiresInMins: 10 }),
       });
-  
+
       if (!response.ok) {
         const errorResponse = await response.json();
         console.error("Error response:", errorResponse);
         alert("Invalid username or password.");
         return;
       }
-  
+
       const data = await response.json();
       
-      setWebAccessToken(data.accessToken)      
+      // Set both the token and user data
+      setWebAccessToken(data.token || data.accessToken);
+      setUser({
+        id: data.id,
+        name: data.name || data.firstName + ' ' + data.lastName,
+        email: data.email,
+        // Add other user properties as needed
+      });
+      
       navigate("/home");
     } catch (error) {
-      console.error("hello:", error);
+      console.error("Error:", error);
       alert("An error occurred. Please try again.");
     }
   };
-  
 
   return (
     <>
