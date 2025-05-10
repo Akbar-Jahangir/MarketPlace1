@@ -1,7 +1,7 @@
-import React from "react";
-import { CardProps } from "../../interfaces/Card.interface";
+import React, { memo } from "react";
+import { CardProps } from "../../interfaces/card.interface";
 import { useNavigate } from "react-router-dom";
-import { PlusSvg } from "../../assets/Svgs";
+import { PlusSvg } from "../../assets/svgs";
 
 const Card: React.FC<CardProps> = ({
   title,
@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({
   followers,
 }) => {
   const navigate = useNavigate();
-
+  
   const handleClick = (id?: string) => {
     {id!==undefined? navigate(`/productDetails/${id}`):navigate(`/browseCategory/${name}`)}
    
@@ -159,4 +159,4 @@ const Card: React.FC<CardProps> = ({
   );
 };
 
-export default Card;
+export default memo(Card);

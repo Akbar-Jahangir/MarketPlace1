@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const UseCategory = () => {
+const useCategory = () => {
   const [categoriesList, setCategoriesList] = useState<
     { name: string; slug: string; url: string }[]
   >([]);
@@ -57,4 +57,4 @@ const UseCategory = () => {
   return { categoriesData, categoriesList };
 };
 
-export default UseCategory;
+export default useCategory;

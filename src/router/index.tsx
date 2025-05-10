@@ -1,19 +1,19 @@
 import React, { Suspense, lazy } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { CartProvider } from "../contexts/cartContext/cartContext";
-import { AuthProvider } from "../contexts/authContext/authContext";
+import { CartProvider } from "../contexts/cartContext/CartContext";
+import { AuthProvider } from "../contexts/authContext/AuthContext";
 
 // Lazy load components for code splitting
-const LoginPage = lazy(() => import("../pages/loginPage"));
-const AppLayout = lazy(() => import("../layout/appLayout"));
-const Home = lazy(() => import("../pages/home"));
-const Category = lazy(() => import("../pages/category"));
+const LoginPage = lazy(() => import("../pages/Login"));
+const AppLayout = lazy(() => import("../layout/AppLayout"));
+const Home = lazy(() => import("../pages/Home"));
+const Category = lazy(() => import("../pages/Category"));
 const Cart = lazy(() => import("../components/Cart/Cart"));
-const DisplayPage = lazy(() => import("../pages/displayPage"));
-const Products = lazy(() => import("../pages/products"));
-const ProductDetails = lazy(() => import("../pages/productDetails"));
+const DisplayPage = lazy(() => import("../pages/Display"));
+const Products = lazy(() => import("../pages/Products"));
+const ProductDetails = lazy(() => import("../pages/ProductDetails"));
 const CartCheckout = lazy(() => import("../components/Cart/CartCheckout"));
-const BrowseCategory = lazy(() => import("../pages/browseCategory"));
+const BrowseCategory = lazy(() => import("../pages/BrowseCategory"));
 
 const Index: React.FC = () => {
   return (

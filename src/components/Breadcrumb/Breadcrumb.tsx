@@ -1,10 +1,8 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { BreadcrumbItem } from "./breadcrumbItem.interface";
 
-interface BreadcrumbItem {
-  name: string;
-  path: string;
-}
+
 
 const Breadcrumb: React.FC = () => {
   const location = useLocation();

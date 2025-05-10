@@ -1,5 +1,5 @@
 import React from "react";
-import { FacebookSvg, InstagramSvg, LogoSvg, TwitterSvg } from "../assets/Svgs";
+import { FacebookSvg, InstagramSvg, LogoSvg, TwitterSvg } from "../assets/svgs";
 
 const Footer: React.FC = () => {
   return (

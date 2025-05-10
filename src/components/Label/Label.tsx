@@ -1,5 +1,5 @@
 import React from "react";
-import { LabelProps } from "./Label.interface";
+import { LabelProps } from "./label.interface";
 
 const Label: React.FC<LabelProps> = ({ text, customestyles }) => {
   return (

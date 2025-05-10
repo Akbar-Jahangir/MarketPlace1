@@ -1,6 +1,6 @@
 import React from "react";
 import DemoImg from "../assets/images/profileImg.png";
-import CardsGallery from "../layout/cardsGallery/cardsGallery";
+import CardsGallery from "../layout/cardsGallery/CardsGallery";
 import UseCategory from "../hooks/useCategory";
 import ProductCategories from "../utils/productCategories";
 

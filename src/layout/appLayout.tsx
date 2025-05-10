@@ -7,7 +7,7 @@ function AppLayout() {
     <>
       <div className="w-[100%]relative">
         <header className="sticky top-0 z-50">
-          <Header isLogin={true} />
+          <Header />
         </header>
         <main>
           <Outlet />

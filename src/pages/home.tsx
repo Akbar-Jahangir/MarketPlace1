@@ -1,11 +1,11 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
 import DemoImg from "../assets/images/profilePic1.png";
-import CardsGallery from "../layout/cardsGallery/cardsGallery";
-import UseLimitedProduct from "../hooks/useLimitedProduct";
+import CardsGallery from "../layout/cardsGallery/CardsGallery";
+import useFetch from "../hooks/useFetch";
 
 const Home: React.FC = () => {
-  const productsList = UseLimitedProduct();
+  const productsList = useFetch('https://dummyjson.com/products?limit=6');
 
   const layoutDefinition = [
     {

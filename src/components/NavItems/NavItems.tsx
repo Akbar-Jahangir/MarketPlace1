@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { NavItemsProps } from "./NavItems.interface";
+import { NavItemsProps } from "./navItems.interface";
 import Button from "../Button/Button";
 import { NavLink, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../contexts/authContext/authContext";
+import { AuthContext } from "../../contexts/authContext/AuthContext";
 
 const NavItems: React.FC<NavItemsProps> = ({
   customStyle,

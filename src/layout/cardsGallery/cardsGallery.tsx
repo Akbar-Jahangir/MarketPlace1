@@ -1,7 +1,7 @@
 import React from "react";
 import { CardsListProps } from "./cardsGallery.interface";
 import Card from "../../components/Card/Card";
-import CardDefinition from "../../components/Card/CardGalleryDefinition";
+import CardDefinition from "../../components/Card/cardGalleryDefinition";
 
 const CardsGallery: React.FC<CardsListProps> = ({
   layoutDefinition,
@@ -12,6 +12,8 @@ const CardsGallery: React.FC<CardsListProps> = ({
   customGap,
   currency,
 }) => {
+
+  
   return (
     <>
       <div className={`${customStyles}`}>
@@ -60,4 +62,4 @@ const CardsGallery: React.FC<CardsListProps> = ({
   );
 };
 
-export default CardsGallery;
+export default React.memo(CardsGallery);

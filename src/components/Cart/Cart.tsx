@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
-import CardDefinition from "../Card/CardGalleryDefinition";
+import CardDefinition from "../Card/cardGalleryDefinition";
 import Label from "../Label/Label";
-import Input from "../Input/Input";
+import {Input} from "../Input/Input";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import { useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
-import { CartContext } from "../../contexts/cartContext/cartContext";
+import { CartContext } from "../../contexts/cartContext/CartContext";
 import Card from "../Card/Card";
-import { CrossSvg } from "../../assets/Svgs";
+import { CrossSvg } from "../../assets/svgs";
 import SelectDropdown from "../SelectdropDown/SelectDropDown";
 
 const Cart: React.FC = () => {
@@ -77,7 +77,7 @@ console.log(selectedCountry);
               <Breadcrumb />
               <div>
                 <div>
-                  <div className="flex flex-col lg:flex-row  items-center lg:justify-between flex-wrap w-[100%]">
+                  <div className="flex flex-col lg:flex-row  items-center lg:items-start lg:justify-between flex-wrap w-[100%]">
                     <div className="w-[90%] lg:w-[45%]">
                       <p className="font-Inter text-lg pb-7">Yours Items</p>
                       {cart.map((product, index) => (
@@ -92,6 +92,7 @@ console.log(selectedCountry);
                             cardStyles={cardsStyle}
                             currency="$"
                           />
+                          
                           <Button
                             type="button"
                             text={<CrossSvg />}

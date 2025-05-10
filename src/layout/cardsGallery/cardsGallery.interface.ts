@@ -1,6 +1,6 @@
-import { CardProps } from "../../interfaces/Card.interface";
-import { CardStyleProps } from "../../interfaces/CardStyle.interface";
-import { CardGalleryDefinitionProps } from "../../interfaces/CardGalleryDefinition.interface";
+import { CardProps } from "../../interfaces/card.interface";
+import { CardStyleProps } from "../../interfaces/cardStyle.interface";
+import { CardGalleryDefinitionProps } from "../../interfaces/cardGalleryDefinition.interface";
 
 export interface CardsListProps{
     layoutDefinition:CardGalleryDefinitionProps[]
